@@ -22,6 +22,20 @@ if ((nombre !="") && (apellido !="")){
 
     };
 
+    //funcion
+    
+    let espera = 20
+    let paciente = ingresarNombre + i
+
+    function tiempo (paciente, espera) {
+        let demora = paciente + espera
+    }
+
+    console.log (demora);
+
+
+
+
 
 
 
