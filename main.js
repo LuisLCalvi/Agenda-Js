@@ -1,39 +1,47 @@
-//Algoritmo Simple
-
-let nombre = prompt ("Ingrese su nombre completo");
-let apellido = prompt ("Ingrese su apellido");
-let resultado = nombre + " " + apellido;
-
-//Algoritmo con condicional
-if (nombre == "") { alert("No ingresaste tu nombre")};
-
-if (apellido == "") { alert("No ingresaste tu apellido")};
-
-
-if ((nombre !="") && (apellido !="")){
-    alert ("Bienvenido" + " " + resultado + " " + "listo para ordenar turnos")
-    };
-
-//Ciclo
-
-    for (let i = 1; i <= 10; i++) {
-        let ingresarNombre = prompt("Ingresar paciente")
-        console.log (" Turno N° "+i+" Paciente: "+ingresarNombre);
-
-    };
 
     //funcion
-    
-    let espera = 20
-    let paciente = ingresarNombre + i
 
-    function tiempo (paciente, espera) {
-        let demora = paciente + espera
+let paciente = nombre + " " + apellido;
+
+solicitarTurno ();
+
+function solicitarTurno () {
+    let turno = confirm ("pedir turno")
+    solicitarDatos (datos)
+}
+
+function solicitarDatos (d) {
+    if (d) {
+        let nombre = prompt ("Ingresar Nombre completo");
+        let apellido = prompt ("Ingresar Apellido")
+        especialidadMedica (medico)
+
+    } else{
+        alert("Es requerimiento completar los datos solicitados")
     }
 
-    console.log (demora);
+}
+
+function especialidadMedica () {
+    console.log ("1: traumatologia")
+    console.log ("2: endocrinologia")
+    console.log ("3. clinica")
+    console.log ("4: neumonologia")
+    console.log ("5: neurologia")
+    console.log ("6. radiologia")
+}
+
+let op = prompt("Ingresar opcion")
+
+switch (op){
+    case "1":     for (let i = 1; i <= 10; i++) {
+        console.log (" Turno N° "+i+ paciente);
+
+    };
+    break;
 
 
+}
 
 
 
