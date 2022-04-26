@@ -19,21 +19,44 @@ if ((nombre !="") && (apellido !="")){
 
     //funcion
 
+
+
 solicitarDatos ();
 
-function solicitarDatos (d) {
-    prompt ("Ingresar Nombre completo y Apellido del paciente");
 
+function solicitarDatos (d) {
+
+//OBJETO
+
+let nombrePaciente = prompt ("Ingrese Nombre del paciente");
+while (nombrePaciente != "salir"){
+let apellidoPaciente = prompt ("Ingrese Apellido del paciente");
+let obraSocial = prompt ("Ingrese Obra Social del paciente");
+
+
+
+
+    const paciente = { 
+        nombrePaciente: (nombrePaciente),
+        apellidoPaciente: (apellidoPaciente),
+        obraSocial: (obraSocial),
 
     }
+    
 
-seleccionarMedico ()
+    console.log(paciente)
+
+    alert(paciente.nombrePaciente + " " + paciente.apellidoPaciente + " " + paciente.obraSocial)
 
 
-function seleccionarMedico () {
+
+seleccionarEspecialidad ()
+
+
+function seleccionarEspecialidad () {
     console.log ("1: traumatologia")
     console.log ("2: endocrinologia")
-    console.log ("3. radiologia")
+    console.log ("3. ginecologia")
     console.log ("4: neurologia")
     console.log ("5: clinica")
     console.log ("6. gastroenterologia")
@@ -45,68 +68,127 @@ function seleccionarMedico () {
 
 }
 
+const traumatologia = ['Dr. Lombardo Mauro', 'Dr. Almeida Julio']
+const endocrinologia = ['Dra. Ramirez, Mercedes', 'Dra. Gadea Monica']
+const ginecologia = ['Dra. Altamirano Liz', 'Dr. Sirimarco, Federico']
+const neurologia = ['Dr. Falco Nicolas', 'Dr. Euler Javier']
+const clinica = ['Dr. Mones Ruiz Matias', 'Dra. Ramirez Yamila']
+const gastroenterologia = ['Dr. Garcia Pinasco Oscar', 'Dra. Notari Lorena' ]
+const cirugia = ['Dr. Parra Eduardo', 'Dra. Castro Ivana']
+const cardiologia = ['Dr. Gadea Jose', 'Dr. Navaja Ricardo']
+const oftalmologia = ['Dr. Grecco Diego', 'Dra. Navarro Guillermo']
+const psiquiatria = ['Dr. Gianello Federico', 'Dr. Peretti Diego']
 
-let op = prompt("Ingresar opcion")
+let op = prompt("Seleccionar especialidad (numero)")
 
 
 switch (op){     
-    case "1":     
-    alert ("Se guardo turno")
-
+    case "1": 
+            console.log (traumatologia [0])
+            console.log (traumatologia [1])
+            let  = prompt ("Seleccionar Medico"),
+            alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+            nombrePaciente = prompt ("Ingrese nombre del paciente")
 
     break;
 
     case "2":
-    alert ("Se guardo turno")
+        console.log (endocrinologia [0])
+        console.log (endocrinologia [1])
+        let  = prompt ("Seleccionar Medico"),
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        nombrePaciente = prompt ("Ingrese nombre del paciente")
 
     break;
 
-    case "3":
-    alert ("Se guardo turno")
+    case "3": 
+        console.log (ginecologia [0])
+        console.log (ginecologia [1])
+        let  = prompt ("Seleccionar Medico"),
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        nombrePaciente = prompt ("Ingrese nombre del paciente")
 
     break;
 
     case "4":
-        alert ("Se guardo turno")
+        console.log (neurologia [0])
+        console.log (neurologia [1])
+        let  = prompt ("Seleccionar Medico"),
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        nombrePaciente = prompt ("Ingrese nombre del paciente")
+
 
         break;
     
     case "5":
-        alert ("Se guardo turno")
+        console.log (clinica [0])
+        console.log (clinica [1])
+        let  = prompt ("Seleccionar Medico"),
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        nombrePaciente = prompt ("Ingrese nombre del paciente")
+
 
         break;
 
     case "6":
-        alert ("Se guardo turno")
+        console.log (gastroenterologia [0])
+        console.log (gastroenterologia [1])
+        let  = prompt ("Seleccionar Medico"),
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        nombrePaciente = prompt ("Ingrese nombre del paciente")
+
 
         break;
 
     case "7":
-        alert ("Se guardo turno")
+        console.log (cirugia [0])
+        console.log (cirugia [1])
+        let  = prompt ("Seleccionar Medico"),
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        nombrePaciente = prompt ("Ingrese nombre del paciente")
+
 
         break;
 
     case "8":
-        alert ("Se guardo turno")
+        console.log (cardiologia [0])
+        console.log (cardiologia [1])
+        let  = prompt ("Seleccionar Medico"),
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        nombrePaciente = prompt ("Ingrese nombre del paciente")
+
 
         break;
 
     case "9":
-        alert ("Se guardo turno")
+        console.log (oftalmologia [0])
+        console.log (oftalmologia [1])
+        let  = prompt ("Seleccionar Medico"),
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        nombrePaciente = prompt ("Ingrese nombre del paciente")
+
 
         break;
     
     case "10":
-        alert ("Se guardo turno")
+        console.log (psiquiatria [0])
+        console.log (psiquiatria [1])
+        let  = prompt ("Seleccionar Medico"),
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        nombrePaciente = prompt ("Ingrese nombre del paciente")
+
 
         break;
 
     default:
-        console.log("Operacion Invalida")
+        console.log("Su turno es Invalido")
         break;
+
+
 };
 
-
+}
+};
 
 
 
