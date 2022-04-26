@@ -68,16 +68,16 @@ function seleccionarEspecialidad () {
 
 }
 
-const traumatologia = ['Dr. Lombardo Mauro', 'Dr. Almeida Julio']
-const endocrinologia = ['Dra. Ramirez, Mercedes', 'Dra. Gadea Monica']
-const ginecologia = ['Dra. Altamirano Liz', 'Dr. Sirimarco, Federico']
-const neurologia = ['Dr. Falco Nicolas', 'Dr. Euler Javier']
-const clinica = ['Dr. Mones Ruiz Matias', 'Dra. Ramirez Yamila']
-const gastroenterologia = ['Dr. Garcia Pinasco Oscar', 'Dra. Notari Lorena' ]
-const cirugia = ['Dr. Parra Eduardo', 'Dra. Castro Ivana']
-const cardiologia = ['Dr. Gadea Jose', 'Dr. Navaja Ricardo']
-const oftalmologia = ['Dr. Grecco Diego', 'Dra. Navarro Guillermo']
-const psiquiatria = ['Dr. Gianello Federico', 'Dr. Peretti Diego']
+const traumatologia = ['1: Dr. Lombardo Mauro', '2: Dr. Almeida Julio']
+const endocrinologia = ['1: Dra. Ramirez, Mercedes', '2: Dra. Gadea Monica']
+const ginecologia = ['1: Dra. Altamirano Liz', '2: Dr. Sirimarco, Federico']
+const neurologia = ['1: Dr. Falco Nicolas', '2: Dr. Euler Javier']
+const clinica = ['1: Dr. Mones Ruiz Matias', '2: Dra. Ramirez Yamila']
+const gastroenterologia = ['1: Dr. Garcia Pinasco Oscar', '2: Dra. Notari Lorena' ]
+const cirugia = ['1: Dr. Parra Eduardo', '2: Dra. Castro Ivana']
+const cardiologia = ['1: Dr. Gadea Jose', '2: Dr. Navaja Ricardo']
+const oftalmologia = ['1: Dr. Grecco Diego', '2: Dra. Navarro Guillermo']
+const psiquiatria = ['1: Dr. Gianello Federico', '2: Dr. Peretti Diego']
 
 let op = prompt("Seleccionar especialidad (numero)")
 
