@@ -68,26 +68,51 @@ function seleccionarEspecialidad () {
 
 }
 
-const traumatologia = ['1: Dr. Lombardo Mauro', '2: Dr. Almeida Julio']
-const endocrinologia = ['1: Dra. Ramirez, Mercedes', '2: Dra. Gadea Monica']
-const ginecologia = ['1: Dra. Altamirano Liz', '2: Dr. Sirimarco, Federico']
-const neurologia = ['1: Dr. Falco Nicolas', '2: Dr. Euler Javier']
-const clinica = ['1: Dr. Mones Ruiz Matias', '2: Dra. Ramirez Yamila']
-const gastroenterologia = ['1: Dr. Garcia Pinasco Oscar', '2: Dra. Notari Lorena' ]
-const cirugia = ['1: Dr. Parra Eduardo', '2: Dra. Castro Ivana']
-const cardiologia = ['1: Dr. Gadea Jose', '2: Dr. Navaja Ricardo']
-const oftalmologia = ['1: Dr. Grecco Diego', '2: Dra. Navarro Guillermo']
-const psiquiatria = ['1: Dr. Gianello Federico', '2: Dr. Peretti Diego']
+const traumatologia = [
+    {medico: 'Dr. Lombardo Mauro', dias: ' lunes - miercoles - viernes'},
+    {medico:'Dr. Almeida Julio',  dias: 'lunes - martes - miercoles - viernes'},]
+const endocrinologia = [
+    {medico: 'Dra. Ramirez, Mercedes', dias: 'martes - miercoles - jueves'}, 
+    {medico: 'Dra. Gadea Monica', dias: 'lunes - viernes'},]
+const ginecologia = [
+    {medico: 'Dra. Altamirano Liz', dias: 'martes - jueves'}, 
+    {medico: 'Dr. Sirimarco, Federico', dias: 'lunes - viernes'},]
+const neurologia = [
+    {medico: 'Dr. Falco Nicolas', dias: 'miercoles'},
+    {medico: 'Dr. Euler Javier', dias: 'lunes - viernes'},]
+const clinica = [
+    {medico: 'Dr. Mones Ruiz Matias', dias: 'lunes - martes - miercoles - jueves'},
+    {medico: 'Dra. Ramirez Yamila', dias: 'martes - viernes'},]
+const gastroenterologia = [
+    {medico: 'Garcia Pinasco Oscar', dias: 'lunes - miercoles'},
+    {medico: 'Notari Lorena', dias: 'martes - jueves'}, ]
+const cirugia = [
+    {medico: 'Parra Eduardo', dias: 'lunes - jueves - viernes'},
+    {medico: 'Castro Ivana', dias: 'martes - miercoles'},]
+const cardiologia = [
+    {medico: 'Gadea Jose', dias: 'lunes - miercoles - jueves'},
+    {medico: 'Navaja Ricardo', dias: 'martes - viernes'},]
+const oftalmologia = [
+    {medico: 'Grecco Diego', dias: 'martes - viernes'},
+    {medico: 'Navarro Guillermo', dias: 'lunes - miercoles - jueves'},]
+const psiquiatria = [
+    {medico: ' Gianello Federico', dias: 'lunes - martes - miercoles - jueves'},
+    {medico: ' Peretti Diego', dias: 'viernes'},]
+
+// FUNCIONES DE ORDEN SUPERIOR BUSQUEDA ARRAYS
+    console.log( psiquiatria.some((el) => el.medico == " Gianello Federico"))
+
 
 let op = prompt("Seleccionar especialidad (numero)")
 
 
 switch (op){     
-    case "1": 
+    case "1":
             console.log (traumatologia [0])
             console.log (traumatologia [1])
             let  = prompt ("Seleccionar Medico"),
             alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+
             nombrePaciente = prompt ("Ingrese nombre del paciente")
 
     break;
@@ -96,7 +121,9 @@ switch (op){
         console.log (endocrinologia [0])
         console.log (endocrinologia [1])
         let  = prompt ("Seleccionar Medico"),
-        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+
+        
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno" )
         nombrePaciente = prompt ("Ingrese nombre del paciente")
 
     break;
@@ -105,7 +132,7 @@ switch (op){
         console.log (ginecologia [0])
         console.log (ginecologia [1])
         let  = prompt ("Seleccionar Medico"),
-        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno")
+        alert("Estimado " + " " + paciente.nombrePaciente  + " " + paciente.apellidoPaciente + " " + "Se guardo su turno" )
         nombrePaciente = prompt ("Ingrese nombre del paciente")
 
     break;
@@ -187,9 +214,9 @@ switch (op){
 
 };
 
-}
-};
 
+};
+}
 
 
 
