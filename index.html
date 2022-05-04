@@ -5,41 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda</title>
-    <link rel="stylesheet" href="./estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilo/estilo.css">
 </head>
 <body>
-    <header>
-        <h1 class="header__titulo">
-            Agenda Consultorios Externos
+    <header id="header__contenedor">
+        <h1 id="titulop">
+            AGENDA
         </h1>
+        <nav id="navegacion" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                        <button class="btn btn-outline-success" type="submit">Registrarse</button>
+                    </form>
+            </div>
+            <div class="container-fluid">
+                <button class="btn btn-outline-success" type="submit">ingresar</button>
+            </form>
+    </div>
+    <div class="container-fluid">
+        <button class="btn btn-outline-success" type="submit">reportar</button>
+    </form>
+</div>
 
-        <nav>
-            <li>Inicio</li>
-            <li>Especialidad
-                <ul>
-                    <li>Clinica</li>
-                    <li>Neurologia</li>
-                    <li>Traumatologia</li>
 
-                </ul>
-            </li>
-            <button>REGISTRARTE</button>
+
         </nav>
-
 
     </header>
 
 
+<div class="formulario">
+    INGRESAR NOMBRE
+    <input id="nombre" type = "nombre">
+    INGRESAR APELLIDO
+    <input id="apellido" type="apellido">
+    <button>Ingresar</button>
+</div>
 
-    <form action="Ingresar">
+<div class="contenedor__especialidades">
+    <div >
 
-        <input type="Usuario">
-        <input type="Contraseña">
-        <button>INGRESAR</button>
-    </form>
+    </div>
+    <div>
+    
+    </div>
+    
+    <div>
+    
+    </div>
+
+</div>
 
 
+<script src="main.js"></script>
 
-    <script src="main.js"></script>
+
 </body>
 </html>
