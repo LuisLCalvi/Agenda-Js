@@ -1,28 +1,27 @@
 //Algoritmo Simple
-alert("Bienvenido, buena jornada laboral")
-
-let nombre = prompt ("Ingrese su nombre ");
-
-let apellido = prompt ("Ingrese su apellido");
-
-let resultado = nombre + " " + apellido;
+const nombre = document.querySelector ("#nombre")
+const apellido = document.querySelector ("#apellido")
+const nombreApellido = nombre + " " + apellido;
+const btnIngresar = document.querySelector ("#btnPrincipal")
+const btnRegistro = document.querySelector ("#btn")
+const miformulario = document.getElementsByClassName("formulario")
 
 //Algoritmo con condicional
-if (nombre == "") { alert("No ingresaste tu nombre")};
 
-if (apellido == "") { alert("No ingresaste tu apellido")};
+console.log (miformulario)
+if (nombre == " ") { alert("No ingresaste tu nombre")};
 
+if (apellido == " ") { alert("No ingresaste tu apellido")};
 
-if ((nombre !="") && (apellido !="")){
-    alert ("Bienvenido" + " " + resultado + " " + "listo para comenzar a gestionar turnos")
+if ((nombre!=" ") && (apellido !=" ")){
+    btnIngresar.addEventListener("click", solicitarDatos)
     };
 
+btnRegistro.addEventListener("click", ()=>{
+console.log ("Se registro con exito")
+})
+
     //funcion
-
-
-
-solicitarDatos ();
-
 
 function solicitarDatos (d) {
 
@@ -98,9 +97,6 @@ const oftalmologia = [
 const psiquiatria = [
     {medico: ' Gianello Federico', dias: 'lunes - martes - miercoles - jueves'},
     {medico: ' Peretti Diego', dias: 'viernes'},]
-
-// FUNCIONES DE ORDEN SUPERIOR BUSQUEDA ARRAYS
-    console.log( psiquiatria.some((el) => el.medico == " Gianello Federico"))
 
 
 let op = prompt("Seleccionar especialidad (numero)")
@@ -218,21 +214,7 @@ switch (op){
 
 };
 
-//DOM
 
-
-const encabezado = document.getElementById("titulop")
-console.log(titulop)
-console.log(encabezado.innerHTML)
-
-
-
-
-encabezado.innerText = " Se modifico el nombre"
-
-encabezado.innerHTML = "<strong> Nuevamente modificamos el nombre </strong>"
-
-encabezado.style.color = "blue"
 }
 
 
