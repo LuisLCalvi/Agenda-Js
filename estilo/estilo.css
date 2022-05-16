@@ -2,34 +2,39 @@
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: rgb(62, 134, 74);
-}
+
+/*Index*/
+/* body{
+background-color: rgb(62, 134, 74);
+}*/
 header{
     
-background-color: rgb(62, 134, 74);
+/*background-color: rgb(62, 134, 74);*/
 margin-top: 0;
 margin-bottom: 140px;
 }
 h1{ 
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #09f;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+.btn{
+    background-color: rgb(255, 255, 255);
+}
 .formulario{
     display: grid;
     width: 260px;
     height: 250px;
     border: 3px black solid;
-    margin-left: 500px;
+    margin-left: 40%;
+    top: 50%;
     text-align: center;
-    background-color: rgb(73, 73, 194);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: black;
+
 }
 
 .contenedor__especialidades{
@@ -38,5 +43,144 @@ h1{
 
 }
 
+.btningresaru {
+    list-style: none;
+    
+}
+
+/*BackGround*/
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+
+
+
+/*Principal*/
+
+/*CALENDARIO*/
+
+.calendario{
+    width: 300px;
+    height: 280px;
+    margin-left: 0;
+    margin-top: -38px;
+    padding: 10px;
+    background-color: brown;
+}
+.calendario__informacion{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 18px ;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+
+.calendario__mantes {
+    font-size: 15px;
+    color: beige;
+    margin-right: auto;
+}
+
+.calendario__msiguiente {
+    font-size: 15px;
+    color: beige;
+    margin-left: auto;
+}
+
+.calendario__semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.calendario__fecha{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);;
+    grid-gap: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calendario__item{
+display: grid;
+line-height: 2;
+}
+
+
+
+.calendario__mes, .calendario__año{
+    padding: .5em 1em;
+}
+
+.calendario__hoy{
+    background: lightcoral;
+    color: white;
+    width: 50%;
+    border-radius: 50%;
+}
+
+
+.calendario__diasatras {
+    opacity: 50%;
+}
+
+.contenedor__especialidades{
+    margin-left: 350px;
+    width: 500px;
+}
+.contenedor__medicos{
+    margin-left: 350px;
+    width: 500px;
+}
+
+.turnera{
+    margin-left: 10px;
+    margin-top: 40px;
+    width: 200px;
+}
 
 /*<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>*/

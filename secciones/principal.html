@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialidades</title>
+    <link rel="stylesheet" href="../estilo/estilo.css">
+</head>
+<body>
+
+    <div class="contenedor__especialidades">
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="especialidad">
+            <option selected>Seleccionar especialidad</option>
+            <option value="1">Traumatología</option>
+            <option value="2">Endocrinología</option>
+            <option value="3">Ginecología</option>
+            <option value="4">Neurología</option>
+            <option value="5">Clinica</option>
+            <option value="6">Gastroenterología</option>
+            <option value="7">Cirugía</option>
+            <option value="8">Cardiología</option>
+            <option value="9">Oftalmología</option>
+            <option value="10">Psiquiatría</option>
+        </select>
+    </div>
+
+
+    <div class="contenedor__medicos">
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="medicos">
+            <option selected>Seleccionar Medico</option>
+            <option value="1">Lombardo Mauro</option>
+            <option value="1">Almeida Julio</option>
+            <option value="2">Ramirez, Maria de las mercedes</option>
+            <option value="2">Gadea Monica</option>
+            <option value="3">Altamirano Liz</option>
+            <option value="3">Sirimarco Federico</option>
+            <option value="4">Falco Nicolas</option>
+            <option value="4">Euler Raul</option>
+            <option value="5">Mones Ruiz Matias</option>
+            <option value="5">Ramirez Yamila</option>
+            <option value="6">Garcia Pinasco Oscar</option>
+            <option value="6">Notari Lorena</option>
+            <option value="7">Parra Eduardo</option>
+            <option value="7">Castro Ivana</option>
+            <option value="8">Gadea Jose</option>
+            <option value="8">navajas Ricardo</option>
+            <option value="9">Grecco Diego</option>
+            <option value="9">Navarro Guilermo</option>
+            <option value="10">Gianello Federico</option>
+            <option value="10">Peretti Diego</option>
+    
+        </select>
+
+    </div>
+
+
+    <div class="calendario">
+        <div class="calendario__informacion">
+            <div class="calendario__mantes" id="mes-antes">&#9664;</div>
+            <div class="calendario__mes" id="mes"></div>
+            <div class="calendario__año" id="año"></div>
+            <div class="calendario__msiguiente" id="mes-sig">&#9654;</div>
+        </div>
+    
+        <div class="calendario__semana">
+            <div class="calendario__dia calendario__item">Mon</div>
+            <div class="calendario__dia calendario__item">Tue</div>
+            <div class="calendario__dia calendario__item">Wed</div>
+            <div class="calendario__dia calendario__item">Thu</div>
+            <div class="calendario__dia calendario__item">Fri</div>
+            <div class="calendario__dia calendario__item">Sat</div>
+            <div class="calendario__dia calendario__item">Sun</div>
+        </div>
+    
+        <div class="calendario__fecha" id="fecha"></div>
+    </div>
+    
+
+
+    <div class="turnera">
+        Nombre<input type=" text" id="nompreP"> Apellido<input type="text" id="apellidoP"> Obra Social<input type="text" id="obraSocialP"> <button id="confirmarTurno">Confirmar</button>
+        <label for="escribir nombre"></label>
+    </div>
+
+
+
+    <script src="../js/principal.js"></script>
+</body>
+
+
+</html>
