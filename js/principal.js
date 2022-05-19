@@ -242,9 +242,9 @@ function agregarPaciente (evt){
 }
 
     function mostrarEspecialidades (especialidades){
-        const mostrarEspecialidad = document.createComment ('option')
+        const mostrarEspecialidad = document.createElement ('option')
         mostrarEspecialidad.textContent = especialidades;
         mostrarEspecialidad.classList.add ('mostrar__especialidad')
-        formularioP.appendChild (mostrarEspecialidad)
+        formularioP.appendChild (mostrarEspecialidades)
     }
 }
