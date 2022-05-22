@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traumatologia</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilo/estilo.css">
+    <link rel="shortcut icon" href="../imagenes/faviconleg.png" type="image/x-icon">
+</head>
+<body>
+
+
+    <header class="header__principal">
+
+        <div class="dropdown">
+            <a class="btn btn-success dropdown-toggle" role="button" id="dropdownMenuLink" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Seleccionar Especialidad
+            </a>
+    
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="../secciones/clinica.html">Clinica Medica</a></li>
+                <li><a class="dropdown-item" href="../secciones/endo.html">Endocrinologia</a></li>
+                <li><a class="dropdown-item" href="../secciones/gastro.html">Gastroenterologia</a></li>
+                <li><a class="dropdown-item" href="../secciones/psiqui.html">Psiquiatria</a></li>
+                <li><a class="dropdown-item" href="../secciones/uro.html">Urologia</a></li>
+            </ul>
+        </div>
+
+        <h1 class="titulo__especialidad">TRAUMATOLOGO</h1>
+        <img src="../imagenes/leg.png" alt="" class="imagenT">
+
+        <h2 class="nombre__trauma">Lombardo Mauro</h2>
+        
+    <div class="calendario">
+        <div class="calendario__informacion">
+            <div class="calendario__mantes" id="mes-antes">&#9664;</div>
+            <div class="calendario__mes" id="mes"></div>
+            <div class="calendario__año" id="año"></div>
+            <div class="calendario__msiguiente" id="mes-sig">&#9654;</div>
+        </div>
+    
+        <div class="calendario__semana">
+            <div class="calendario__dia calendario__item">Lun</div>
+            <div class="calendario__dia calendario__item">Mar</div>
+            <div class="calendario__dia calendario__item">Miér</div>
+            <div class="calendario__dia calendario__item">Jue</div>
+            <div class="calendario__dia calendario__item">Vie</div>
+            <div class="calendario__dia calendario__item">Sab</div>
+            <div class="calendario__dia calendario__item">Dom</div>
+        </div>
+    
+        <div class="calendario__fecha" id="fecha"></div>
+    </div>
+
+    
+</header>
+
+    <div class="turnera">
+        <h2 class="titulo__Datos">Datos del paciente</h2>
+        <form action="" id="formularioP" class="formulario__principal">
+            Nombre Completo
+            <textarea id="nombreP" class="nombreP" rows="1"></textarea>
+            Apellido
+            <textarea id="apellidoP" class="apellidoP" rows="1"></textarea>
+            Obra Social
+            <textarea id="obrasocialP" class="obrasocialP" rows="1"></textarea>
+            DNI 
+            <textarea id="dniP" class="dniP" type="number" rows="1"></textarea>
+            Direccion
+            <textarea id="dirP" class="dirP" type="number" rows="1"></textarea>
+            Telefono
+            <textarea id="telP" class="telP" type="number" rows="1"></textarea>
+
+        <input type="submit"  class="confirmarTurno" id="confirmarTurno" value="Confirmar" >
+
+        </form>
+
+
+    </div>
+
+    <div class="horarios__trauma">
+        <div class="items"> <strong>HORA</strong></div>
+        <div class="items"> <strong>LISTA DE PACIENTES</strong></div>
+        <div class="items"> <strong>HORA</strong></div>
+        <div class="items"> <strong>LISTA DE PACIENTES</strong></div>
+        <div class="items">7:00</div>
+        <div class="items"></div>
+        <div class="items">16:00</div>
+        <div class="items"></div>
+        <div class="items">7:30</div>
+        <div class="items"></div>
+        <div class="items">16:30</div>
+        <div class="items"></div>
+        <div class="items">8:00</div>
+        <div class="items"></div>
+        <div class="items">17:00</div>
+        <div class="items"></div>
+        <div class="items">8:30</div>
+        <div class="items"></div>
+        <div class="items">17:30</div>
+        <div class="items"></div>
+        <div class="items">9:00</div>
+        <div class="items"></div>
+        <div class="items">18:00</div>
+        <div class="items"></div>
+        <div class="items">9:30</div>
+        <div class="items"></div>
+        <div class="items">18:30</div>
+        <div class="items"></div>
+        <div class="items">10:00</div>
+        <div class="items"></div>
+        <div class="items">19:00</div>
+        <div class="items"></div>
+        <div class="items">10:30</div>
+        <div class="items"></div>
+        <div class="items">19:30</div>
+        <div class="items"></div>
+        <div class="items">11:00</div>
+        <div class="items"></div>
+        <div class="items">20:00</div>
+        <div class="items"></div>
+    </div>
+
+
+
+
+
+    <script src="../js/trauma.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

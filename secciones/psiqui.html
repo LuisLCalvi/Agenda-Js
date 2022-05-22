@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psiquiatria</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilo/estilo.css">
+    <link rel="shortcut icon" href="../imagenes/faviconmental.png" type="image/x-icon">
+</head>
+<body>
+
+
+    <header class="header__principal">
+
+        <div class="dropdown">
+            <a class="btn btn-success dropdown-toggle" role="button" id="dropdownMenuLink" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Seleccionar Especialidad
+            </a>
+    
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="../secciones/clinica.html">Clinica Medica</a></li>
+                <li><a class="dropdown-item" href="../secciones/endo.html">Endocrinologia</a></li>
+                <li><a class="dropdown-item" href="../secciones/gastro.html">Gastroenterologia</a></li>
+                <li><a class="dropdown-item" href="../secciones/trauma.html">Traumatologia</a></li>
+                <li><a class="dropdown-item" href="../secciones/uro.html">Urologia</a></li>
+            </ul>
+        </div>
+        <h1 class="titulo__especialidad">PSIQUIATRA</h1>
+        <img src="../imagenes/mental.png" alt="" class="imagenP">
+
+        <h2 class="nombre__trauma">Peretti Diego</h2>
+        
+    <div class="calendario">
+        <div class="calendario__informacion">
+            <div class="calendario__mantes" id="mes-antes">&#9664;</div>
+            <div class="calendario__mes" id="mes"></div>
+            <div class="calendario__año" id="año"></div>
+            <div class="calendario__msiguiente" id="mes-sig">&#9654;</div>
+        </div>
+    
+        <div class="calendario__semana">
+            <div class="calendario__dia calendario__item">Lun</div>
+            <div class="calendario__dia calendario__item">Mar</div>
+            <div class="calendario__dia calendario__item">Miér</div>
+            <div class="calendario__dia calendario__item">Jue</div>
+            <div class="calendario__dia calendario__item">Vie</div>
+            <div class="calendario__dia calendario__item">Sab</div>
+            <div class="calendario__dia calendario__item">Dom</div>
+        </div>
+    
+        <div class="calendario__fecha" id="fecha"></div>
+    </div>
+
+
+    
+</header>
+
+    <div class="turneraP">
+        <h2 class="titulo__DatosP">Datos del paciente</h2>
+        <form action="" id="formularioPP" class="formulario__principalP">
+            Nombre Completo
+            <textarea id="nombrePP" class="nombrePP" rows="1"></textarea>
+            Apellido
+            <textarea id="apellidoPP" class="apellidoPP" rows="1"></textarea>
+            Obra Social
+            <textarea id="obrasocialPP" class="obrasocialPP" rows="1"></textarea>
+            DNI 
+            <textarea id="dniPP" class="dniPP" type="number" rows="1"></textarea>
+            Direccion
+            <textarea id="dirPP" class="dirPP" type="number" rows="1"></textarea>
+            Telefono
+            <textarea id="telPP" class="telPP" type="number" rows="1"></textarea>
+
+        <input type="submit"  class="confirmarTurnoP" id="confirmarTurnoP" value="Confirmar" >
+
+        </form>
+
+
+    </div>
+
+    <div class="horarios__psiqui">
+        <div class="itemsP"> <strong>HORA</strong></div>
+        <div class="itemsP"> <strong>LISTA DE PACIENTES</strong></div>
+        <div class="itemsP"><strong>HORA</strong></div>
+        <div class="itemsP"><strong>LISTA DE PACIENTES</strong></div>
+        <div class="itemsP">7:00</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">16:00</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">7:30</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">16:30</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">8:00</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">17:00</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">8:30</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">17:30</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">9:00</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">18:00</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">9:30</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">18:30</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">10:00</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">19:00</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">10:30</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">19:30</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">11:00</div>
+        <div class="itemsP"></div>
+        <div class="itemsP">20:00</div>
+        <div class="itemsP"></div>
+    </div>
+
+
+
+
+    <script src="../js/psiqui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

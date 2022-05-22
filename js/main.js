@@ -21,21 +21,25 @@ function agregarRegistro (evt) {
 
         apellidoU === "" && mostrarError ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados")
 
-        nombreU !="", apellidoU !="" && mostrarMensaje ("Bienvenido" + " " + usuario + " " + "se ha registrado con éxito, ya puede ingresar")        
+        nombreU !="", apellidoU !="" && mostrarMensaje ("Bienvenido" + " " + usuario + " " + "se ha registrado con éxito, ya puede seleccionar la especialidad para adquirir el turno")        
 
-        function mostrarError (error) {
-            const mensajeError = document.createElement ('p')
+        function mostrarError(error) {
+            const mensajeError = document.createElement('p')
             mensajeError.textContent = error;
-            mensajeError.classList.add ('error')
+            mensajeError.classList.add('error')
 
-            const contenido = document.querySelector('.contenido')
-            contenido. appendChild (mensajeError)
+            //const contenido = document.querySelector('.contenido')
+            //contenido.appendChild(mensajeError)
 
-            setTimeout (()=> {
-                mensajeError.remove ()
-            }, 2000 )
+}
 
-        }
+//LIBRERIA
+        Swal.fire({
+            title: 'Error!',
+            text: 'No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados',
+            icon: 'error',
+            confirmButtonText: 'Volver a intentar'
+            })
 
         function mostrarMensaje (inicio) {
             const mensajeInicio = document.createElement ('p')
@@ -46,7 +50,7 @@ function agregarRegistro (evt) {
 
             setTimeout (()=> {
                 mensajeInicio.remove ()
-            }, 3000 )
+            }, 4000 )
 
         }
         localStorage.setItem (nombreU, apellidoU)

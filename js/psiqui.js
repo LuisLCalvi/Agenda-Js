@@ -97,121 +97,34 @@ writeMonth(mesNumero);
 
 //Gestion de Turnos
 
-const especialidades = ["traumatologia", "neurologia", "endocrinologia", "clinica", "ginecologia", "urologia", "psiquiatria", "gastroenterologia"]
 
-const traumatologia = {
-    id: 1,
-    medico: "Lombardo Mauro",
-    dias: "lunes - miercoles",
-
-    id: 2,
-    medico: "Almeida Julio",
-    dias: "martes - jueves",
-
-}
-
-const neurologia = {
-    id: 1,
-    medico: "Falco Nicolas",
-    dias: "lunes - miercoles - jueves",
-
-    id: 2,
-    medico: "Euler Raul",
-    dias: "martes - viernes",
-}
-
-const endocrinologia = {
-    id: 1,
-    medico: "Ramirez Maria de las Mercedes",
-    dias: "lunes - martes - jueves - viernes",
-
-    id:2,
-    medico: "Gadea Florencia",
-    dias: "martes - miercoles - viernes",
-
-}
-
-const clinica = {
-    id: 1,
-    medico: "Mones Ruiz Matias",
-    dias: "lunes - jueves",
-
-    id:2,
-    medico: "Ramirez yamila",
-    dias: "martes - miercoles - viernes"
-}
-
-const ginecologia = {
-    id:1,
-    medico: "Altamirano, Liz",
-    dias: "lunes - miercoles - jueves",
-
-    id: 2,
-    medico: "Sirimarco Federico",
-    dias: "lunes - martes - viernes",
-
-}
-
-const urologia = {
-    id: 1,
-    medico: "Barbara Francisco",
-    dias: "lunes - martes - miercoles - jueves - viernes",
-
-    id: 2,
-    medico: "Rapallo, Martin",
-    dias: "martes - jueves",
-}
-
-const psiquiatria = {
-    id: 1,
-    medico: "Gianello Raul",
-    dias: "lunes - miercoles - jueves - viernes",
-
-    id: 2,
-    medico: "Peretti Diego",
-    dias: "martes - miercoles - viernes",
-}
-
-const gastroenterologia = {
-    id:1,
-    medico: "Garcia Pinasco Oscar",
-    dias: "lunes - martes - miercoles - jueves - viernes",
-
-    id: 2,
-    medico: "Notari Lorena",
-    dias: "lunes - miercoles - viernes",
-}
-
-const formularioP = document.querySelector ('#formularioP')
+const formularioP = document.querySelector ('#formularioPP')
 
 formularioP.addEventListener ("submit", agregarPaciente)
 
 
 function agregarPaciente (evt){
     evt.preventDefault();
-    const nombrePaciente = document.querySelector ('#nombreP').value
-    const apellidoPaciente = document.querySelector('#apellidoP').value
-    const obraSocial = document.querySelector ('#obrasocialP').value
-    const dniPaciente = document.querySelector ('#dniP').value
-    const telefonoPaciente = document.querySelector ('#telP').value
-    const paciente = nombrePaciente + " " + apellidoPaciente + " "+ dniPaciente
+    const nombrePaciente = document.querySelector ('#nombrePP').value
+    const apellidoPaciente = document.querySelector('#apellidoPP').value
+    const obraSocial = document.querySelector ('#obrasocialPP').value
+    const dniPaciente = document.querySelector ('#dniPP').value
+    const telefonoPaciente = document.querySelector ('#telPP').value
+    const direccionPaciente = document.querySelector ('#dirPP').value
+    const paciente = nombrePaciente + " " + apellidoPaciente 
 
 
-    // DESTRUCTURACION
-
-    let destructurar = (paciente) => {
-        const { nombrePaciente, apellidoPaciente} = paciente
-    }
-    console.log (nombrePaciente, apellidoPaciente)
-
-    
     nombrePaciente === "" && mostrarError ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados")
 
     apellidoPaciente === "" && mostrarError ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados")
 
     dniPaciente === "" && mostrarError ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados")
+    
+    direccionPaciente === "" && mostrarError ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados")
 
-    nombrePaciente !="", apellidoPaciente !="", obraSocial != "", dniPaciente != "", telefonoPaciente !="" && mostrarMensaje ("Estimado" + " "+  paciente + " " + "se ha guardado su turno") 
+    telefonoPaciente === "" && mostrarError ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados")
+
+    nombrePaciente !="", apellidoPaciente !="", obraSocial != "", dniPaciente != "", telefonoPaciente !="", direccionPaciente !="" && mostrarMensaje ("Estimado" + " "+  paciente + " " + "se ha guardado su turno" ) 
 
 
     function mostrarError (error) {
@@ -219,7 +132,7 @@ function agregarPaciente (evt){
         mensajeError.textContent = error;
         mensajeError.classList.add ('error2')
 
-        const turnera = document.querySelector('.turnera')
+        const turnera = document.querySelector('.turneraP')
         turnera. appendChild (mensajeError)
 
         setTimeout (()=> {
@@ -232,19 +145,21 @@ function agregarPaciente (evt){
             const mensajeInicio = document.createElement ('p')
             mensajeInicio.textContent = inicio;
             mensajeInicio.classList.add ('inicio2')
-            const turnera = document.querySelector('.turnera')
+            const turnera = document.querySelector('.turneraP')
             turnera. appendChild (mensajeInicio)
 
             setTimeout (()=> {
                 mensajeInicio.remove ()
             }, 3000 )
 
+
+        
+
 }
 
-    function mostrarEspecialidades (especialidades){
-        const mostrarEspecialidad = document.createElement ('option')
-        mostrarEspecialidad.textContent = especialidades;
-        mostrarEspecialidad.classList.add ('mostrar__especialidad')
-        formularioP.appendChild (mostrarEspecialidades)
-    }
+localStorage.setItem (paciente, obraSocial)
+
+
 }
+
+
