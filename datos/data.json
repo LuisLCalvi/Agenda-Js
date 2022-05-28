@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "especialidad": "Clinica Medica",
+        "nombre": "Ramirez Yamila",
+        "dias": "Lunes Martes Miercoles Jueves Viernes"},
+
+    {   "id": 2,
+        "especialidad": "Endocrinologia",
+        "nombre": "Ramirez Maria de las Mercedes",
+        "dias": "martes jueves"},
+
+    {   "id": 3,
+        "especialidad": "Gastroenterologia",
+        "nombre": "Garcia Pinasco Oscar",
+        "dias": "Lunes Miercoles Viernes"},
+    
+    {   "id": 4,
+        "especialidad": "Psiquiatria",
+        "nombre": "Peretti Diego",
+        "dias": "Martes Miercoles Jueves Viernes"},
+
+    {   "id": 5,
+        "especialidad": "Traumatologia",
+        "nombre": "Lombardo Mauro",
+        "dias": "Lunes Martes Miercoles Viernes" },
+
+
+    {   "id": 6,
+        "especialidad": "Urologia",
+        "nombre": "Barbara Francisco",
+        "dias": "Lunes Martes Miercoles Jueves Viernes"}
+]
+

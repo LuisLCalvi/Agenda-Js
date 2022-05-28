@@ -1,11 +1,28 @@
-//Algoritmo Simple
+//FETCH
+const obtenerDatos = () =>{
+    fetch ("datos/data.json")
+    .then ((respuesta) => {
+      //  console.log (respuesta)
+        return respuesta.json ()
+    })
+    .then ((dato) => {
+        console.log (dato)
+    })
+
+    .catch ((err) =>{
+        console.log ("Ha ocurrido un error:", err)
+    })
+
+}
 
 
-//Algoritmo con condicional
-//const error = alert ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados");
+const btn3 = document.querySelector ('.btn3')
+
+
+btn3.addEventListener ('click', obtenerDatos)
+
 
 const formulario = document.querySelector ('#formulario')
-
 
 formulario.addEventListener ("submit", agregarRegistro)
 
@@ -24,22 +41,24 @@ function agregarRegistro (evt) {
         nombreU !="", apellidoU !="" && mostrarMensaje ("Bienvenido" + " " + usuario + " " + "se ha registrado con éxito, ya puede seleccionar la especialidad para adquirir el turno")        
 
         function mostrarError(error) {
-            const mensajeError = document.createElement('p')
-            mensajeError.textContent = error;
-            mensajeError.classList.add('error')
+//LIBRERIA            
+                Swal.fire({
+                title: 'Error!',
+                text: 'No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados',
+                icon: 'error',
+                confirmButtonText: 'Volver a intentar'
+                })
+
+            // const mensajeError = document.createElement('p')
+            // mensajeError.textContent = error;
+            // mensajeError.classList.add('error')
 
             //const contenido = document.querySelector('.contenido')
             //contenido.appendChild(mensajeError)
 
 }
 
-//LIBRERIA
-        Swal.fire({
-            title: 'Error!',
-            text: 'No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados',
-            icon: 'error',
-            confirmButtonText: 'Volver a intentar'
-            })
+
 
         function mostrarMensaje (inicio) {
             const mensajeInicio = document.createElement ('p')
@@ -53,8 +72,8 @@ function agregarRegistro (evt) {
             }, 4000 )
 
         }
-        localStorage.setItem (nombreU, apellidoU)
 
+        localStorage.setItem (nombreU, apellidoU)
 
 
 
