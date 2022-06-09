@@ -98,94 +98,24 @@ writeMonth(mesNumero);
 //Gestion de Turnos
 
 
-
-const traumatologia = {
-    id: 1,
-    medico: "Lombardo Mauro",
-    dias: "lunes - miercoles",
-
-    id: 2,
-    medico: "Almeida Julio",
-    dias: "martes - jueves",
-
-}
-
-const neurologia = {
-    id: 1,
-    medico: "Falco Nicolas",
-    dias: "lunes - miercoles - jueves",
-
-    id: 2,
-    medico: "Euler Raul",
-    dias: "martes - viernes",
-}
-
-const endocrinologia = {
-    id: 1,
-    medico: "Ramirez Maria de las Mercedes",
-    dias: "lunes - martes - jueves - viernes",
-
-    id:2,
-    medico: "Gadea Florencia",
-    dias: "martes - miercoles - viernes",
-
-}
-
-const clinica = {
-    id: 1,
-    medico: "Mones Ruiz Matias",
-    dias: "lunes - jueves",
-
-    id:2,
-    medico: "Ramirez yamila",
-    dias: "martes - miercoles - viernes"
-}
-
-const ginecologia = {
-    id:1,
-    medico: "Altamirano, Liz",
-    dias: "lunes - miercoles - jueves",
-
-    id: 2,
-    medico: "Sirimarco Federico",
-    dias: "lunes - martes - viernes",
-
-}
-
-const urologia = {
-    id: 1,
-    medico: "Barbara Francisco",
-    dias: "lunes - martes - miercoles - jueves - viernes",
-
-    id: 2,
-    medico: "Rapallo, Martin",
-    dias: "martes - jueves",
-}
-
-const psiquiatria = {
-    id: 1,
-    medico: "Gianello Raul",
-    dias: "lunes - miercoles - jueves - viernes",
-
-    id: 2,
-    medico: "Peretti Diego",
-    dias: "martes - miercoles - viernes",
-}
-
-const gastroenterologia = {
-    id:1,
-    medico: "Garcia Pinasco Oscar",
-    dias: "lunes - martes - miercoles - jueves - viernes",
-
-    id: 2,
-    medico: "Notari Lorena",
-    dias: "lunes - miercoles - viernes",
-}
-
 const formularioP = document.querySelector ('#formularioP')
 
 formularioP.addEventListener ("submit", agregarPaciente)
+const listaPacientesT = document.querySelector ('#listaHorariostrauma')
 
+let listadoT = [];
+        
+
+
+        
+        formularioP.addEventListener('submit', agregarPaciente)
+
+        document.addEventListener("DOMContentLoaded", () => {
+            listadoT = JSON.parse(localStorage.getItem('listado')) || [];
+            incorporandoLista()
+        })
+
+        listaPacientesT.addEventListener('dblclick', borrarPaciente)
 
 function agregarPaciente (evt){
     evt.preventDefault();
@@ -195,7 +125,9 @@ function agregarPaciente (evt){
     const dniPaciente = document.querySelector ('#dniP').value
     const telefonoPaciente = document.querySelector ('#telP').value
     const direccionPaciente = document.querySelector ('#dirP').value
-    const paciente = nombrePaciente + " " + apellidoPaciente
+    const paciente ={ 
+        id: Date.now (),
+        texto: nombrePaciente + " " + apellidoPaciente + " " + obraSocial + " " + dniPaciente}
 
 
 
@@ -210,7 +142,7 @@ function agregarPaciente (evt){
 
     telefonoPaciente === "" && mostrarError ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados")
 
-    nombrePaciente !="", apellidoPaciente !="", obraSocial != "", dniPaciente != "", telefonoPaciente !="", direccionPaciente !="" && mostrarMensaje ("Estimado" + " "+  paciente + " " + "se ha guardado su turno" ) 
+    nombrePaciente !="", apellidoPaciente !="", obraSocial != "", dniPaciente != "", telefonoPaciente !="", direccionPaciente !="" && mostrarMensaje ("Estimado" + " "+  paciente.texto + " " + "se ha guardado su turno" ) 
 
 
     function mostrarError (error) {
@@ -243,6 +175,50 @@ function agregarPaciente (evt){
 
 }
 
-localStorage.setItem (paciente, obraSocial)
 
+listadoT.push(paciente)
+
+incorporandoLista()
+
+formularioP.reset ()
+}
+function incorporandoLista() {
+
+    limpiar();
+
+
+    if (listadoT.length > 0) {
+        listadoT.forEach(paciente => {
+            const btnBorrar = document.createElement('a');
+            btnBorrar.classList = "borrar-paciente";
+            btnBorrar.innerText = ' ❌ '
+
+            const li = document.createElement('li');
+            li.classList = "lista__pacientes"
+
+            li.innerText = paciente.texto
+            li.appendChild(btnBorrar)
+            li.dataset.pacienteId = paciente.id
+
+            listaPacientesT.appendChild(li)
+        })
+    }
+    sincroStorage();
+}
+
+function sincroStorage() {
+    localStorage.setItem('listadoT', JSON.stringify(listadoT))
+}
+
+function limpiar() {
+    while (listaPacientesT.firstChild) {
+        listaPacientesT.removeChild(listaPacientesT.firstChild)
+    }
+}
+
+function borrarPaciente(evt) {
+    const id = evt.target.parentElement.dataset.pacienteId
+    listadoT = listadoT.filter(paciente => paciente.id != id)
+    incorporandoLista()
+    
 }

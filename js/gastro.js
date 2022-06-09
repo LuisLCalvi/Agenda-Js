@@ -102,6 +102,20 @@ const formularioP = document.querySelector ('#formularioPG')
 
 formularioP.addEventListener ("submit", agregarPaciente)
 
+const listaPacientesG = document.querySelector ('#listaHorariosgastro')
+
+let listadoG = [];
+        
+
+        formularioP.addEventListener('submit', agregarPaciente)
+
+        document.addEventListener("DOMContentLoaded", () => {
+            listadoG = JSON.parse(localStorage.getItem('listadoG')) || [];
+            incorporandoLista()
+        })
+
+        listaPacientesG.addEventListener('dblclick', borrarPaciente)
+
 
 function agregarPaciente (evt){
     evt.preventDefault();
@@ -111,7 +125,9 @@ function agregarPaciente (evt){
     const dniPaciente = document.querySelector ('#dniPG').value
     const telefonoPaciente = document.querySelector ('#telPG').value
     const direccionPaciente = document.querySelector ('#dirPG').value
-    const paciente = nombrePaciente + " " + apellidoPaciente 
+    const paciente ={ 
+        id: Date.now (),
+        texto: nombrePaciente + " " + apellidoPaciente + " " + obraSocial + " " + dniPaciente}
 
 
     nombrePaciente === "" && mostrarError ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados")
@@ -124,7 +140,7 @@ function agregarPaciente (evt){
 
     telefonoPaciente === "" && mostrarError ("No se cargaron de manera correcta los datos, por favor ingrese los datos solicitados")
 
-    nombrePaciente !="", apellidoPaciente !="", obraSocial != "", dniPaciente != "", telefonoPaciente !="", direccionPaciente != "" && mostrarMensaje ("Estimado" + " "+  paciente + " " + "se ha guardado su turno" ) 
+    nombrePaciente !="", apellidoPaciente !="", obraSocial != "", dniPaciente != "", telefonoPaciente !="", direccionPaciente != "" && mostrarMensaje ("Estimado" + " "+  paciente.texto + " " + "se ha guardado su turno" ) 
 
 
     function mostrarError (error) {
@@ -158,8 +174,50 @@ function agregarPaciente (evt){
 }
 
 
-localStorage.setItem (paciente, obraSocial)
 
+listadoG.push(paciente)
+
+incorporandoLista()
+
+formularioP.reset ()
+}
+function incorporandoLista() {
+
+    limpiar();
+
+
+    if (listadoG.length > 0) {
+        listadoG.forEach(paciente => {
+            const btnBorrar = document.createElement('a');
+            btnBorrar.classList = "borrar-paciente";
+            btnBorrar.innerText = ' ❌ '
+
+            const li = document.createElement('li');
+            li.classList = "lista__pacientes"
+
+            li.innerText = paciente.texto
+            li.appendChild(btnBorrar)
+            li.dataset.pacienteId = paciente.id
+
+            listaPacientesC.appendChild(li)
+        })
+    }
+    sincroStorage();
 }
 
+function sincroStorage() {
+    localStorage.setItem('listado', JSON.stringify(listadoG))
+}
 
+function limpiar() {
+    while (listaPacientesG.firstChild) {
+        listaPacientesG.removeChild(listaPacientesG.firstChild)
+    }
+}
+
+function borrarPaciente(evt) {
+    const id = evt.target.parentElement.dataset.pacienteId
+    listadoG = listadoG.filter(paciente => paciente.id != id)
+    incorporandoLista()
+    
+}

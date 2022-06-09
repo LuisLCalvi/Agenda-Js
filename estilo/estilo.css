@@ -318,9 +318,7 @@ width: 250px;
 } 
 
 .horarios__trauma{
-    display: grid;
-    grid-template-columns: 80px 350px 80px 350px;
-    grid-template-rows: repeat(10,44px);
+
     margin-left: 26%;
     margin-top: -480px;
     margin-bottom: 30px;
@@ -360,7 +358,7 @@ width: 250px;
     width: 310px;
     border: 1px black solid;
     margin-left: 1%;
-    background-color: #6c3;
+    background-color: rgb(235, 235, 235);
     font-family: Arial, Helvetica, sans-serif;
 
 
@@ -414,21 +412,21 @@ width: 250px;
     padding: 10px;
         width: 250px;
 
-    
+
 } 
 
 
 .horarios__clinica{
-    display: grid;
-    grid-template-columns: 80px 350px 80px 350px;
-    grid-template-rows: repeat(10,44px);
+
     margin-left: 26%;
     margin-top: -480px;
     margin-bottom: 30px;
     background-color: rgb(235, 235, 235);
     width: 860px;
     text-align: center;
+    
 }
+
 
 .itemsC{
     border: 1px black solid;
@@ -437,6 +435,28 @@ width: 250px;
     padding: 3px;
 }
 
+.itemsC2{
+    border: 1px black solid;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+}
+
+.lista__pacientes{
+    list-style: none;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px black solid;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.horarios__subtitulo{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px black solid;
+    background-color: rgb(201, 201, 201);
+}
 
 /*ENDO*/
 
@@ -462,7 +482,7 @@ width: 250px;
     width: 310px;
     border: 1px black solid;
     margin-left: 1%;
-    background-color: #6c3;
+    background-color: rgb(235, 235, 235);
     font-family: Arial, Helvetica, sans-serif;
 
 
@@ -523,9 +543,7 @@ width: 250px;
 
 
 .horarios__endo{
-    display: grid;
-    grid-template-columns: 80px 350px 80px 350px;
-    grid-template-rows: repeat(10,44px);
+
     margin-left: 26%;
     margin-top: -480px;
     margin-bottom: 30px;
@@ -566,7 +584,7 @@ width: 250px;
     width: 310px;
     border: 1px black solid;
     margin-left: 1%;
-    background-color: #6c3; 
+    background-color: rgb(235, 235, 235);
     font-family: Arial, Helvetica, sans-serif;
 
 
@@ -628,9 +646,7 @@ width: 250px;
 
 
 .horarios__gastro{
-    display: grid;
-    grid-template-columns: 80px 350px 80px 350px;
-    grid-template-rows: repeat(10,44px);
+
     margin-left: 26%;
     margin-top: -480px;
     margin-bottom: 30px;
@@ -670,7 +686,7 @@ width: 250px;
     width: 310px;
     border: 1px black solid;
     margin-left: 1%;
-    background-color: #6c3;
+    background-color: rgb(235, 235, 235);
     font-family: Arial, Helvetica, sans-serif;
 
 
@@ -732,9 +748,7 @@ width: 250px;
 
 
 .horarios__uro{
-    display: grid;
-    grid-template-columns: 80px 350px 80px 350px;
-    grid-template-rows: repeat(10,44px);
+
     margin-left: 26%;
     margin-top: -480px;
     margin-bottom: 30px;
@@ -776,7 +790,7 @@ width: 250px;
     width: 310px;
     border: 1px black solid;
     margin-left: 1%;
-    background-color: #6c3;
+    background-color: rgb(235, 235, 235);
     font-family: Arial, Helvetica, sans-serif;
 
 
@@ -836,9 +850,7 @@ width: 250px;
 } 
 
 .horarios__psiqui{
-    display: grid;
-    grid-template-columns: 80px 350px 80px 350px;
-    grid-template-rows: repeat(10,44px);
+
     margin-left: 26%;
     margin-top: -480px;
     margin-bottom: 30px;
