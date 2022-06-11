@@ -188,7 +188,7 @@ function incorporandoLista() {
         listadoU.forEach(paciente => {
             const btnBorrar = document.createElement('a');
             btnBorrar.classList = "borrar-paciente";
-            btnBorrar.innerText = ' ❌ '
+            btnBorrar.innerText = ' ° '
 
             const li = document.createElement('li');
             li.classList = "lista__pacientes"
