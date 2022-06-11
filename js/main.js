@@ -49,12 +49,7 @@ function agregarRegistro (evt) {
                 confirmButtonText: 'Volver a intentar'
                 })
 
-            // const mensajeError = document.createElement('p')
-            // mensajeError.textContent = error;
-            // mensajeError.classList.add('error')
 
-            //const contenido = document.querySelector('.contenido')
-            //contenido.appendChild(mensajeError)
 
 }
 
@@ -71,10 +66,11 @@ function agregarRegistro (evt) {
                 mensajeInicio.remove ()
             }, 4000 )
 
+            formulario.reset ()
+
         }
 
         localStorage.setItem (nombreU, apellidoU)
-
 
 
 
